@@ -1,0 +1,19 @@
+class Solution(object):
+    def isPalindrome(self, s):
+        #lowering every character to lowercase and removing special characters
+        s = s.lower().replace(" ", "").replace(":", "").replace(",", "")
+
+        #Creating a pointer for the left and right side of the string
+        left = 0
+        right = len(s) - 1
+
+        #Creating while loop to iterate through the string until the left and right pointers equal 
+        while left < right:
+            if s[left] == s[right]:
+                left += 1
+                right -= 1
+            else:
+                return False
+                
+        #return True if the string is a valid palindrome
+        return True 
