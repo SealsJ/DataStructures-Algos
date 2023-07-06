@@ -20,3 +20,5 @@ class Solution(object):
         
         #no cycle in our linked list
         return False
+
+#Linear time O(N), Constant space O(1)
