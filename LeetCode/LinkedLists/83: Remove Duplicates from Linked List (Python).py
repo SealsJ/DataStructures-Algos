@@ -7,8 +7,8 @@ class Solution(object):
     def deleteDuplicates(self, head):
         current = head
 
-        while current and current.next:
-            if current.next.val == current.val:
+        while current:
+            while current.next and current.next.val == current.val:
                 current.next = current.next.next
             current = current.next
 
