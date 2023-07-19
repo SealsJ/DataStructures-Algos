@@ -25,4 +25,5 @@ class Solution(object):
         else:
             tail.next = list2
 
+        #So we don't return dummy variable, fake head node, and only return true head node
         return dummy.next
