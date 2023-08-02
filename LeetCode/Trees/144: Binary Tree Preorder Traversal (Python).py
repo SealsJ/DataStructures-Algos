@@ -6,6 +6,7 @@
 #         self.right = right
 class Solution(object):
     def preorderTraversal(self, root):
+        #Iterative
         res = []
         stack = [root]
 
@@ -13,7 +14,19 @@ class Solution(object):
             current = stack.pop()
             if current:
                 res.append(current.val)
-                stack.append(root.left)
                 stack.append(root.right)
+                stack.append(root.left)
+
+        return res
+
+        #Recursive
+        def dfs(node):
+            if not node:
+                return []
+            res.append(node.val)
+            dfs(node.left)
+            dfs(node.right)
+
+        dfs(root)
 
         return res
