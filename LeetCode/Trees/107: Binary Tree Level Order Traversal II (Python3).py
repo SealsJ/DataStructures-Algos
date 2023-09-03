@@ -29,6 +29,7 @@ class Solution:
                 if curr.right:
                     queue.append(curr.right)
 
+            #We could also just leave results as a list, and reverse it with [::-1] or reversed()
             results.appendleft(level)
 
         return results
