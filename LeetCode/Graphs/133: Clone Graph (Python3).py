@@ -32,3 +32,23 @@ class Solution:
 
 
         #Time Complexity: O(n) = O(Edges + Nodes)
+
+        #BFS APPROACH
+        visited = {}
+
+        if not node:
+            return node
+
+        queue = deque([node])
+        visited[node] = Node(node.val)
+
+        while queue:
+            n = queue.popleft()
+            
+            for neighbor in n.neighbors:
+                if neighbor not in visited:
+                    visited[neighbor] = Node(neighbor.val)
+                    queue.append(neighbor)
+                visited[n].neighbors.append(visited[neighbor])
+        
+        return visited[node]
