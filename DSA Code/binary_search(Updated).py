@@ -1,14 +1,15 @@
 """
+Binary Search: Searching algo for a sorted list of elements
+
+When to use it?
+You need to find a specific element in an array which is sorted (either ascending or descending)
+
 Time Complexity:
 Best Case -> O(1) , target element is found at the middle of the array
 Worse Case -> O(logn), target element is at the ends of the array, have to make log(n) comparisons cutting array in half
 
 Space Complexity:
 O(1) because it only requires constant space for variables regardless of input size
-
-When to use it?
-You need to find a specific element in an array which is sorted (either ascending or descending)
-
 """
 
 #Iterative Approach
