@@ -1,5 +1,5 @@
 """
-Stack: Maintains a last-in, first-out (LIFO) order
+Stack: Maintains a last-in, first-out (LIFO) order // Implementation for DFS ALGOS
 
 Time Complexity:
 Push(insertion) -> O(1) .append() in Python
