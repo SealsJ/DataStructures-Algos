@@ -25,3 +25,13 @@ class Solution(object):
     head.next = None
     
     return newHead
+
+
+    #Recursive Solution
+    if head is None or head.next is None:
+        return head
+
+    prev = self.reverseList(head.next)
+    head.next.next = head
+    head.next = None
+    return prev
