@@ -1,17 +1,21 @@
 class Solution(object):
     def lengthOfLongestSubstring(self, s):
-        #Initiate a hashset to check for duplicate characters
-        hashset = set()
-        l = 0
-        result = 0
+        #Sliding Window Solution // TC: O(n), SC: O(n)
 
-        #Increment the right pointer through the length of string
+        #Create a set to store unique characters in our window
+        testSet = set()
+
+        #Utilize two pointers, one left, one right in for loop, create a result variable
+        l = 0
+        res = 0
+
         for r in range(len(s)):
-            #if right pointer reaches character in hashset, remove it and adjust left pointer
-            while s[r] in hashset:
-                hashset.remove(s[l])
+            #while duplicated value is in set, remove it and adjust left pointer
+            while s[r] in testSet:
+                testSet.remove(s[l])
                 l += 1
-            hashset.add(s[r])
-            #Determine the max result of current result vs previous results
-            result = max(result, r - l + 1)
-        return result
+            testSet.add(s[r])
+            #calculate max length between current max and new updated length of left/right pointers
+            res = max(res, r - l + 1)
+
+        return res
