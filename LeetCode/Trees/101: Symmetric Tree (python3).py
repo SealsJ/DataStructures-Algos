@@ -6,6 +6,8 @@
 #         self.right = right
 class Solution:
     def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+        #TIME COMPLEXITY AND SPACE COMPLEXITY BOTH O(n)
+        
         #Create an empty queue, adding the first two children
         queue = deque([root.left, root.right])
 
