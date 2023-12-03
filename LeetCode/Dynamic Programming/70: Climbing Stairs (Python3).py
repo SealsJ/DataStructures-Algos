@@ -10,3 +10,5 @@ class Solution:
             two = temp
 
         return one
+
+        #TC/SC: O(n)
