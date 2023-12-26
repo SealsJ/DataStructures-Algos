@@ -1,3 +1,3 @@
-# DataStructures/Algos
+# DataStructures and Algorithms
 
-Hello! This is a repository that is a curated collection of computer science data structures and algorithms for me to refer back to as I further my understanding of their implementation to solve real world challenges. 
+This is a repository that is a curated collection of data structures and algorithms problems from LeetCode for me to refer back to as I further my understanding of their implementation to solve real world challenges involving code scalability and sustainability. 
