@@ -1,5 +1,6 @@
 class Solution:
     def dailyTemperatures(self, temperatures: List[int]) -> List[int]:
+        #TC: O(N) Monotonic Decreasing Stack
         ans = [0] * len(temperatures)
         stack = [] #pair values: [temp, index value]
 
